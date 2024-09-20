@@ -8,7 +8,8 @@
     "scripts": {
         "rollup": "rollup -c --bundleConfigAsCjs",
         "test": "jest",
-        "test:watch": "jest --watch"
+        "test:watch": "jest --watch",
+        "semantic-release": "semantic-release"
     },
     "repository": {
         "type": "git",
@@ -20,6 +21,13 @@
         "typescript",
         "d3"
     ],
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
     "author": "Manuel Nielsen <MaNielsen@forske.org>",
     "license": "ISC",
     "bugs": {
@@ -43,6 +51,7 @@
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-postcss": "^4.0.2",
         "sass": "^1.79.2",
+        "semantic-release": "^24.1.1",
         "ts-jest": "^29.2.5",
         "ts-node": "^10.9.2",
         "tslib": "^2.7.0",
