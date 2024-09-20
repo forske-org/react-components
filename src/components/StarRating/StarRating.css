@@ -1,0 +1,20 @@
+.star_rating {
+    background-color: transparent;
+}
+
+.star_rating__active {
+    color: red;
+}
+
+.star_rating__inactive {
+    color: gray;
+}
+
+.star_rating__star {
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+    :hover {
+        color: black;
+    }
+}
