@@ -1,0 +1,4 @@
+# Removing the build directory
+/dist/
+# Removing the node_modules directory
+/node_modules/
