@@ -1,12 +1,8 @@
-import { useState } from 'react'
-
 import { StarRatingProps } from './StarRating.types'
 import './StarRating.css'
 
-function StarRating (props: StarRatingProps) {
+export default function StarRating (props: StarRatingProps) {
     const stars = Array.from({ length: 5 }, (_, i) => i + 1)
-
-    const [rating, setRating] = useState(0)
 
     return (
         <div className={'star_rating'}>
@@ -14,10 +10,10 @@ function StarRating (props: StarRatingProps) {
             {stars.map((star, index) => 
                 <button
                     disabled={props.disabled}
-                    data-testid={`${props.testIdPrefix}-${index}`}
+                    data-testid={`star_rating__star`}
                     key={star}
-                    className={`star_rating__${star <= rating ? 'active' : 'inactive'}`}
-                    onClick={() => setRating(star)}
+                    className={`star_rating__${star <= props.rating ? 'active' : 'inactive'}`}
+                    onClick={() => props.handleClick(star)}
                 >
                     <span className='star_rating__star'>★</span>
                 </button>
@@ -25,5 +21,3 @@ function StarRating (props: StarRatingProps) {
         </div>
     )
 }
-
-export default StarRating;
