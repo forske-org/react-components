@@ -2,3 +2,5 @@
 /dist/
 # Removing the node_modules directory
 /node_modules/
+# Removing the test coverage directory
+/coverage/
